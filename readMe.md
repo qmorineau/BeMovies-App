@@ -17,7 +17,7 @@ To run the app locally, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/qmorineau/bemovie-app.git
+git clone https://github.com/qmorineau/BeMovies-App.git
 ```
 Open the index.html file in your preferred web browser.
 
