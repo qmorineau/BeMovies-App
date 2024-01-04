@@ -1,0 +1,59 @@
+footer {
+    @include container;
+    position: relative;
+    font-family: $Inria-Sans;
+    font-weight: $bold;
+    text-transform: uppercase;
+    background-color: $bg-1;
+    color: $color1;
+    padding: 71px 0px 71px 0px;
+    @include ipadPro {
+        @include container($ipad)
+    }
+    @include laptop13 {
+        @include container($ipadPro)
+    }
+    @include laptop {
+        @include container($laptop13)
+    }
+    @include pc {
+        @include container($laptop)
+    }
+    @include bigPc {
+        @include container($pc)
+    }
+}
+
+footer .container {
+    position: relative;
+    grid-column: 2/14;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul {
+    display: none;
+    letter-spacing: 0.42px;
+    @include laptop13 {
+        display: flex;
+    }
+}
+
+footer li {
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 29px;
+}
+
+footer li:hover,
+footer a:hover {
+    color: $color2;
+}
+
+#copyright {
+    color: #B8B8B8;
+    font-family: $Inria-Sans;
+    font-size: 14px;
+    font-weight: $Inria-light
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Movies</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="styles/main.css">
+<!-- Template -->
+    <!-- Start Template Register modal -->
+    <template id="register-template">
+        <div id="modal">
+            <div id="modal-window">
+                <img src="img/cross-button.svg" alt="cross to close windows" class="closing-cross">
+                <div id="choose-btn">
+                    <div id="modal-register-btn" class="clicked">signup</div>
+                    <div id="modal-login-btn">login</div>
+                </div>
+                <form action="" id="modal-form">
+                    <input type="text" id="username" placeholder="Username" autocomplete="username">
+                    <input type="email" id="email" placeholder="Email" autocomplete="email">
+                    <input type="password" id="password" placeholder="Password" autocomplete="new-password">
+                    <input type="password" id="password2" placeholder="Confirm password" autocomplete="new-password">
+                    <button type="button" id="#form-register-btn" class="form-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </template>
+    <!-- End Template Register modal -->
+    <!-- Start Template Login modal -->
+    <template id="login-template">
+        <div id="modal">
+            <div id="modal-window">
+                <img src="img/cross-button.svg" alt="cross to close windows" class="closing-cross">
+                <div id="choose-btn">
+                    <div id="modal-register-btn">signup</div>
+                    <div class="clicked" id="modal-login-btn">login</div>
+                </div>
+                <form action="" id="modal-form">
+                    <input type="text" id="username" placeholder="Username" autocomplete="username">
+                    <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+                    <div id="checkbox">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    <button type="button" id="#form-login-btn" class="form-btn">Login</button>
+                </form>
+                <div id="modal-text">
+                    <a href="#" class="forgot-psw">I forgot my password</a>
+                    <p>Not a member yet ? <span class="modal-register-btn">Sign up</span></p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- End Template Login modal -->
+    <!-- Start Template Burger modal -->
+    <template id="burger-template">
+        <div id="modal-burger">
+            <ul>
+                <li><a href="#search-section">search</a></li>
+                <li><a href="#latest-releases">latest</a></li>
+                <li><a href="#movies-by-genre">genres</a></li>
+                <li class="register-btn">register</li>
+                <li class="signin-btn">signin</li>
+            </ul>
+        </div>
+    </template>
+    <!-- End Template Burger modal -->
+    <!-- Start Template Swiper slide -->
+    <template id="swiper-template">
+        <div class="swiper-slide">
+            <div class="swiper-hover">
+                <img src="img/test.jpg" alt="film poster of the movie" class="film-poster">
+                <div class="film-poster-hover">
+                    <h1 class="film-title">Title</h1>
+                    <h2 class="film-year">years</h2>
+                    <h3 class="film-genre">genre</h3>
+                    <img src="img/star.svg" alt="star">
+                    <h4 class="film-rate">rate</h4>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- End Template Swiper slide -->
+    <!-- Start Template Popup Movie -->
+    <template id="template-popup">
+        <div class="modal-popup">
+            <div id="popup-windows">
+                <img src="img/cross-button.svg" id="popup-cross">
+                <img src="img/test.jpg" alt="" class="film-poster">
+                <div id="popup-info">
+                    <h1 class="film-title">title</h1>
+                    <h3 class="film-year">year</h3>
+                    <div id="popup-rate">
+                        <img src="img/star.svg" alt="">
+                        <h2 class="film-rate">rate</h2>
+                    </div>
+                    <h4 class="film-genre">genre</h4>
+                    <p class="film-overview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, ullam commodi placeat veritatis eius dolore beatae hic iure reiciendis, laboriosam at obcaecati quos sunt, id sapiente cum praesentium iusto animi.
+                    Impedit possimus, repudiandae tenetur nobis doloribus, velit commodi omnis nisi veniam error doloremque excepturi. Aut blanditiis laudantium, rerum, quod eveniet labore illum ratione reprehenderit enim optio impedit, explicabo nesciunt aliquam.</p>
+                    <h5>Cast : <span class="actors"></span></h5>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- End Template Popup Movie -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo"><span>be</span>movies</a>
+            <ul>
+                <li><a href="#search-section">search</a></li>
+                <li><a href="#latest-releases">latest</a></li>
+                <li><a href="#movies-by-genre">genres</a></li>
+                <li class="register-btn">register</li>
+                <li class="signin-btn">signin</li>
+            </ul>
+            <div id="burger-btn">
+                <input type="checkbox" name="" id="burger-check">
+                <div id="burger"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="search-section">
+            <form id="searching-bar">
+                <input type="text" id="search" placeholder="Ex : Godfather...">
+                <div id="search-bg">
+                    <div id="search-btn">
+                        <img src="img/Vector.svg" alt="right arrow">
+                    </div>
+                </div>
+            </form>
+            <div id="container-swiper1" class="hidden">
+                <div class="button-prev btn-prev-s1"></div>
+                <div class="swiper mySwiper1">
+                    <div class="swiper-text"></div>
+                    <div class="swiper-wrapper" navigation="true">
+                    </div>
+                </div>
+                <div class="button-next btn-next-s1"></div>
+            </div>
+        </section>
+        <section id="latest-releases">
+            <div id="container-swiper2">
+                <div class="button-prev btn-prev-s2"></div>
+                <div class="swiper mySwiper2">
+                    <div class="swiper-text">Latest releases</div>
+                    <div class="swiper-wrapper" navigation="true">
+                    </div>
+                </div>
+                <div class="button-next btn-next-s2"></div>
+            </div>
+        </section>
+        <section id="movies-by-genre">
+            <h2>Movies by genre</h2>
+            <ul id="genre-list">
+                <li id="genre-clicked" class="comedy-genre">Comedy</li>
+                <li class="drama-genre">Drama</li>
+                <li class="action-genre">Action</li>
+                <li class="romance-genre">Romance</li>
+                <li class="fantasy-genre">Fantasy</li>
+                <li class="animation-genre">Animation</li>
+            </ul>
+            <div id="container-swiper3">
+                <div class="button-prev btn-prev-s3"></div>
+                <div class="swiper mySwiper3">
+                    <div class="swiper-text" id="genre-selected">Comedy</div>
+                    <div class="swiper-wrapper" navigation="true">
+                    </div>
+                </div>
+                <div class="button-next btn-next-s3"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <a href="#" class="logo"><span>be</span>movies</a>
+            <ul>
+                <li><a href="#search-section">search</a></li>
+                <li><a href="#latest-releases">latest</a></li>
+                <li><a href="#movies-by-genre">genres</a></li>
+                <li class="register-btn">register</li>
+                <li class="signin-btn">signin</li>
+            </ul>
+            <div id="copyright">@2023 - All rights reserved</div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

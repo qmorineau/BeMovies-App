@@ -1,0 +1,220 @@
+// Media Queries
+
+@mixin ipad() {
+    @media screen and (min-width: $ipad) {
+      @content;
+    }
+}
+
+@mixin ipadPro() {
+    @media screen and (min-width: $ipadPro) {
+      @content;
+    }
+}
+
+@mixin laptop13() {
+    @media screen and (min-width: $laptop13) {
+      @content;
+    }
+}
+
+@mixin laptop() {
+    @media screen and (min-width: $laptop) {
+      @content;
+    }
+}
+  
+@mixin pc() {
+    @media screen and (min-width: $pc) {
+      @content;
+    }
+}
+  
+@mixin bigPc() {
+    @media screen and (min-width: $bigPc) {
+      @content;
+    }
+}
+
+@mixin container($max-width: 1200px) {
+  display: grid;
+  grid-template-columns:
+    minmax(5vw, 1fr) repeat(12, minmax(11px, $max-width / 12))
+    minmax(5vw, 1fr);
+}
+
+// End Media Queries
+
+@mixin logo() {
+  font-family: $Inria-Sans;
+  font-weight: $bold;
+  text-transform: uppercase;
+  font-size: 36px;
+  color: #FFF;
+
+  span {
+    color: $color2;
+  }
+}
+
+@mixin swiper() {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 95px;
+
+  .swiper {
+    max-width: 80%;
+  }
+
+  .swiper-slide {
+    min-width: 234px;
+    min-height: 351px;
+    height: auto!important;
+    cursor: pointer;
+    @include ipad {
+      max-width: none;
+      max-height: none;
+    }
+  }
+
+  .swiper-slide  img {
+    position: relative;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+  }
+  .swiper-hover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  // Swiper hover 
+
+  .film-poster-hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute!important;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.9);
+    z-index: -2;
+  }
+
+  .swiper-hover:hover {
+    .film-poster-hover {
+      z-index: 0;
+    }
+  }
+
+  //title
+  .film-poster-hover .film-title {
+    color: $color1;
+    font-family: $Inter;
+    font-size: 20px;
+    font-weight: $bold;
+    margin-bottom: 23px;
+    text-align: center;
+  }
+  //years
+  .film-poster-hover .film-year {
+    color: #B0B0B0;
+    font-family: $Inter;
+    font-size: 20px;
+    font-weight: $bold;
+    margin-bottom: 20px;
+  }
+  //genre
+  .film-poster-hover .film-genre {
+    color: $color1;
+    font-family: $Inter;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    max-width: 90%;
+    text-align: center;
+  }
+  //star
+  .film-poster-hover img {
+    max-width: 35px;
+    max-height: 35px;
+    margin-bottom: 8px;
+  }
+  //rate
+  .film-poster-hover .film-rate{
+    color: $color2;
+    font-family: $Inter;
+    font-size: 32px;
+    font-weight: $bold;
+  }
+
+  // Swiper Button
+  .button-prev {
+    @include ipadPro {
+      content: url(../img/Vector-left-hover.svg);
+      height: 18px;
+      position: absolute;
+      left: 8%;
+      cursor: pointer;
+      transform: translateY(5px);
+    }
+    @include laptop {
+      height: 25px;
+    }
+    @include pc {
+      height: 30px;
+    }
+    @include bigPc {
+      height: 40px;
+    }
+  }
+
+ .button-prev.swiper-button-disabled {
+    @include ipadPro {
+      content: url(../img/Vector-left.svg);
+      cursor: default;
+    }
+  }
+
+  .button-next {
+    @include ipadPro {
+      content: url(../img/Vector-right-hover.svg);
+      height: 18px;
+      position: absolute;
+      right: 8%;
+      cursor: pointer;
+      transform: translateY(5px);
+    }
+    @include laptop {
+      height: 25px;
+    }
+    @include pc {
+      height: 30px;
+    }
+    @include bigPc {
+      height: 40px;
+    }
+  }
+
+  .button-next.swiper-button-disabled {
+    @include ipadPro {
+      content: url(../img/Vector-right.svg);
+      cursor: default;
+    }
+  }
+
+  .swiper-text {
+      font-family: $Inter;
+      font-weight: $Inter-light;
+      color: $color1;
+      margin-bottom: 10px;
+  }
+}

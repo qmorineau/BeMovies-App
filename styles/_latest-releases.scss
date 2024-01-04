@@ -1,0 +1,13 @@
+#latest-releases {
+    background-color: $bg-2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container-swiper2 {
+    @include swiper;
+}
+
+

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;700&family=Inter:wght@400;700&display=swap');
+
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+@import 'header';
+@import 'search-section';
+@import 'latest-releases';
+@import 'genre';
+@import 'footer';
+@import 'modal';
+
+/* * {
+    outline: 1px solid red;
+} */
