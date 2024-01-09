@@ -42,4 +42,4 @@ The BeMovie app was created during my training to gain hands-on experience with 
 
 ## License
 
-This project is licensed under the MIT License - see the [license](License.md) file for details.
+This project is licensed under the MIT License - see the [license](LICENSE.md) file for details.
