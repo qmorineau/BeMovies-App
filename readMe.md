@@ -4,6 +4,8 @@
 
 BeMovie is a movie search application developed as a part of my training to learn API integration. The app allows users to search for movies, view details as well as explore the latest releases and movies by genre. It is built using HTML5, SASS, and JavaScript, and it is designed to be responsive for various screen sizes.
 
+[See the project](https://qmorineau.github.io/BeMovies-App/)
+
 ## Table of Contents
 1. [Installation](#installation)
 2. [App Features](#app-Features)
